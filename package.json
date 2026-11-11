@@ -1,0 +1,29 @@
+{
+  "name": "@dbbyte/mcp",
+  "version": "0.1.0",
+  "description": "MCP server for DBByte pay-per-use agent storage",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "dbbyte-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-strip-types --test test/*.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
